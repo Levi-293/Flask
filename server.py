@@ -9,6 +9,10 @@ GHL_API_URL = "https://api.gohighlevel.com/v1/notifications"  # Modify with corr
 # Your Go High Level API Key
 GHL_API_KEY = "pit-daa6f987-bc37-4f55-9e2e-034ebe31566d"
 
+@app.route('/')
+def hello_world():
+    return 'Hello, Vercel!'
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     # Get the incoming data from Twilio (message details)
